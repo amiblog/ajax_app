@@ -13,25 +13,32 @@
   </head>
 
   <body>
-    <header>
-      <% if user_signed_in? %>
-        <li>
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-        </li>
-        <li>
-          <%= link_to "本一覧", books_path %>
-        </li>
-      <% else %>
-        <li>
-          <%= link_to "新規登録", new_user_registration_path %>
-        </li>
-        <li>
-          <%= link_to "ログイン", new_user_session_path %>
-        </li>
-      <% end %>
+    <header class="container bg-warning">
+      <nav class="row">
+        <div class="nav_head col-3">
+          <h3>Bookers</h3>
+        </div>
+        <div class="nav_item col-6 offset-3 d-flex justify-content-around">
+          <% if user_signed_in? %>
+            <li>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            </li>
+            <li>
+              <%= link_to "本一覧", books_path %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to "新規登録", new_user_registration_path %>
+            </li>
+            <li>
+              <%= link_to "ログイン", new_user_session_path %>
+            </li>
+          <% end %>
+        </div>
+      </nav>
     </header>
 
-    <main>
+    <main class="mt-5">
       <%= yield %>
     </main>
   </body>
