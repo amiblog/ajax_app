@@ -1,9 +1,17 @@
-<div class="container">
-  <div class="row">
-    <div class="col-6 mx-auto text-center top_img">
-      本棚が溢れかえってないですか？<br>
-      そんな時はBookersのにお任せを。<br>
-      あなたの本棚の代わりを担います。
+<div class="top_img d-flex align-items-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 mx-auto text-center text-light">
+        <p>本棚が溢れかえってないですか？</p><br>
+        <p>そんな時はBookersのにお任せを。</p><br>
+        <p>あなたの本棚の代わりを担います。</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 mx-auto text-center">
+        <%= link_to "新規登録", new_user_registration_path, class: "btn btn-primary"%>
+        <%= link_to "ログイン", new_user_session_path, class: "btn btn-success"%>
+      </div>
     </div>
   </div>
 </div>
