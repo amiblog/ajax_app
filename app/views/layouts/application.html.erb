@@ -16,7 +16,9 @@
     <header class="bg-warning">
       <div class="row">
         <div class="nav_head col-3">
-          <h3>Bookers</h3>
+          <%= link_to root_path do %>
+            <h3>Bookers</h3>
+          <% end %>
         </div>
         <div class="nav_item col-6 offset-3 d-flex justify-content-around">
           <% if user_signed_in? %>
