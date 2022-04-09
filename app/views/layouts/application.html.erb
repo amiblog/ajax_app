@@ -14,28 +14,30 @@
 
   <body>
     <header class="bg-warning">
-      <div class="row">
-        <div class="nav_head col-3">
-          <%= link_to root_path do %>
-            <h3 class="pl-auto text-dark">Bookers</h3>
-          <% end %>
-        </div>
-        <div class="nav_item col-6 offset-3 d-flex justify-content-around">
-          <% if user_signed_in? %>
-            <li>
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-light" %>
-            </li>
-            <li>
-              <%= link_to "本一覧", books_path, class: "btn btn-light" %>
-            </li>
-          <% else %>
-            <li>
-              <%= link_to "新規登録", new_user_registration_path, class: "btn btn-light" %>
-            </li>
-            <li>
-              <%= link_to "ログイン", new_user_session_path, class: "btn btn-light" %>
-            </li>
-          <% end %>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <%= link_to root_path do %>
+              <h3 class="pl-auto text-dark">Bookers</h3>
+            <% end %>
+          </div>
+          <div class="col-5">
+            <% if user_signed_in? %>
+              <li>
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-light" %>
+              </li>
+              <li>
+                <%= link_to "本一覧", books_path, class: "btn btn-light" %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to "新規登録", new_user_registration_path, class: "btn btn-light" %>
+              </li>
+              <li>
+                <%= link_to "ログイン", new_user_session_path, class: "btn btn-light" %>
+              </li>
+            <% end %>
+          </div>
         </div>
       </div>
     </header>
