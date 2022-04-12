@@ -22,21 +22,21 @@
               <h3 class="pl-auto text-dark">Bookers</h3>
             <% end %>
           </div>
-          <div class="col-5">
+          <div class="col-5 d-flex justify-content-end">
             <% if user_signed_in? %>
-              <li>
+              <div>
                 <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-light" %>
-              </li>
-              <li>
+              </div>
+              <div>
                 <%= link_to "本一覧", books_path, class: "btn btn-light" %>
-              </li>
+              </div>
             <% else %>
-              <li>
+              <div>
                 <%= link_to "新規登録", new_user_registration_path, class: "btn btn-light" %>
-              </li>
-              <li>
+              </div>
+              <div>
                 <%= link_to "ログイン", new_user_session_path, class: "btn btn-light" %>
-              </li>
+              </div>
             <% end %>
           </div>
         </div>
